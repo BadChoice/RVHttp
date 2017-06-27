@@ -6,7 +6,7 @@
 //  Copyright © 2017 Revo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface RVHttpResponse : NSObject
 
@@ -20,6 +20,6 @@
 -(NSString*) errorMessage;
 -(NSDictionary*) toDictionary;
 -(NSString*) toString;
--(UIImage*) toImage;
+//-(UIImage*) toImage;
 
 @end

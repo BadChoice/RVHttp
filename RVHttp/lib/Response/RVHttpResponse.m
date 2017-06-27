@@ -41,8 +41,8 @@
     return [NSDictionary fromData:self.data];
 }
 
--(UIImage*) toImage {
+/*-(UIImage*) toImage {
     return [UIImage imageWithData:self.data];
-}
+}*/
 
 @end
