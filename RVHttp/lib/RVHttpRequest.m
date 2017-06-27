@@ -67,6 +67,11 @@
         if( ! self.parameters[paramKey] ) return str(@"%@%@&", carry, paramKey);
         
         NSString* param = self.parameters[paramKey];
+        
+        if(paramEncoded && isNull(param)){
+            return str(@"%@%@&", carry, paramKey);
+        }
+        
         if(paramEncoded && [param isKindOfClass:NSString.class]){
             param = param.urlEncode;
         }
