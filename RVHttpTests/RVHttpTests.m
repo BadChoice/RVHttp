@@ -12,8 +12,6 @@
 #import "RVCollection.h"
 #import "RVHttp.h"
 
-#define isEqual(A,B) [A isEqualToString:B]
-
 @interface RVHttpTest : XCTestCase
 
 @end

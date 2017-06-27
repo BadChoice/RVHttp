@@ -22,7 +22,6 @@
 		766450251F0252FF00AA5E6C /* RVHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664501F1F0252FF00AA5E6C /* RVHttp.m */; };
 		766450261F0252FF00AA5E6C /* RVHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 766450211F0252FF00AA5E6C /* RVHttpRequest.m */; };
 		766450281F02535400AA5E6C /* RVHttp.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 766450271F02535400AA5E6C /* RVHttp.podspec.json */; };
-		7664502A1F02535800AA5E6C /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 766450291F02535800AA5E6C /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +252,7 @@
 				TargetAttributes = {
 					76644FEC1F0252EF00AA5E6C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F2VSE3YKKD;
 						ProvisioningStyle = Automatic;
 					};
 					766450051F0252EF00AA5E6C = {
@@ -407,7 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				766450241F0252FF00AA5E6C /* RVHttpResponse.m in Sources */,
-				7664502A1F02535800AA5E6C /* readme.md in Sources */,
 				76644FF81F0252EF00AA5E6C /* ViewController.m in Sources */,
 				766450231F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m in Sources */,
 				766450261F0252FF00AA5E6C /* RVHttpRequest.m in Sources */,
@@ -551,6 +550,7 @@
 			baseConfigurationReference = 3506C7D89B48EF198B1A44C3 /* Pods-RVHttp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F2VSE3YKKD;
 				INFOPLIST_FILE = RVHttp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = works.revo.RVHttp;
@@ -563,6 +563,7 @@
 			baseConfigurationReference = A8A5A10FDF31783830513429 /* Pods-RVHttp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F2VSE3YKKD;
 				INFOPLIST_FILE = RVHttp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = works.revo.RVHttp;

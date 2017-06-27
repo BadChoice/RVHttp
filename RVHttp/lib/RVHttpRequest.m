@@ -9,14 +9,6 @@
 #import "RVHttpRequest.h"
 #import "RVCollection.h"
 
-#define isEqual(A,B) [A isEqualToString:B]
-#define str(A,...)   [NSString stringWithFormat:A,##__VA_ARGS__]
-#ifdef DEBUG
-#define DLog(format, ...) NSLog(format, ##__VA_ARGS__)
-#else
-#define DLog(format, ...)
-#endif
-
 @implementation RVHttpRequest
 
 +(RVHttpRequest*)method:(NSString*)method url:(NSString*)url{
@@ -93,11 +85,11 @@
 
 -(NSString*)toString{
     return @{
-             @"url"        : self.url           ? self.url          : NSNull.null,
-             @"method"     : self.method        ? self.method       : NSNull.null,
-             @"body"       : self.body          ? self.body         : NSNull.null,
-             @"parameters" : self.parameters    ? self.parameters   : NSNull.null,
-             @"headers"    : self.headers       ? self.headers      : NSNull.null
+             @"url"        : valueOrNull(self.url),
+             @"method"     : valueOrNull(self.method),
+             @"body"       : valueOrNull(self.body),
+             @"parameters" : valueOrNull(self.parameters),
+             @"headers"    : valueOrNull(self.headers)
              }.toString;
 }
 
