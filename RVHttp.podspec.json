@@ -1,6 +1,6 @@
 {
     "name": "RVHttp",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "summary": "Easy http request",
     "license": "MIT",
     "platforms": {
@@ -8,8 +8,8 @@
         "osx": "10.9"
     },
     "source": {
-        "git": "git@bitbucket.org:revo-pos/rvutils.git",
-        "tag": "1.0.2"
+        "git": "git@github.com:BadChoice/RVHttp.git",
+        "tag": "1.0.3"
     },
     "dependencies":{
         "Collection": [
@@ -17,7 +17,7 @@
         ]
     },
     "description": "Making http request super easy",
-    "homepage": "https://bitbucket.org/revo-pos/rvhttp",
+    "homepage": "https://github.com/BadChoice/RVHttp",
     "license": "MIT",
     "authors": {
         "Jordi Puigdellívol": "jordo@gloobus.net"
