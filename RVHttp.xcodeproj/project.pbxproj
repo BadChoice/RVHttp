@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B779636E6F18BD208846F7 /* libPods-RVHttpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074DE084A639C01CC983EE86 /* libPods-RVHttpTests.a */; };
+		34404B78C5C462D8871ABD1A /* libPods-RVHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7141342A86F9923B12AD04A /* libPods-RVHttp.a */; };
 		76644FF21F0252EF00AA5E6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76644FF11F0252EF00AA5E6C /* main.m */; };
 		76644FF51F0252EF00AA5E6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76644FF41F0252EF00AA5E6C /* AppDelegate.m */; };
 		76644FF81F0252EF00AA5E6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76644FF71F0252EF00AA5E6C /* ViewController.m */; };
@@ -14,6 +16,13 @@
 		76644FFD1F0252EF00AA5E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76644FFC1F0252EF00AA5E6C /* Assets.xcassets */; };
 		766450001F0252EF00AA5E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76644FFE1F0252EF00AA5E6C /* LaunchScreen.storyboard */; };
 		7664500B1F0252EF00AA5E6C /* RVHttpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664500A1F0252EF00AA5E6C /* RVHttpTests.m */; };
+		766450221F0252FF00AA5E6C /* RVFakeUrlSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 766450181F0252FF00AA5E6C /* RVFakeUrlSession.m */; };
+		766450231F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664501A1F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m */; };
+		766450241F0252FF00AA5E6C /* RVHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664501D1F0252FF00AA5E6C /* RVHttpResponse.m */; };
+		766450251F0252FF00AA5E6C /* RVHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664501F1F0252FF00AA5E6C /* RVHttp.m */; };
+		766450261F0252FF00AA5E6C /* RVHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 766450211F0252FF00AA5E6C /* RVHttpRequest.m */; };
+		766450281F02535400AA5E6C /* RVHttp.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 766450271F02535400AA5E6C /* RVHttp.podspec.json */; };
+		7664502A1F02535800AA5E6C /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 766450291F02535800AA5E6C /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074DE084A639C01CC983EE86 /* libPods-RVHttpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RVHttpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3506C7D89B48EF198B1A44C3 /* Pods-RVHttp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp.debug.xcconfig"; sourceTree = "<group>"; };
+		446C2CF354AF12BE4E7CA69A /* Pods-RVHttpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76644FED1F0252EF00AA5E6C /* RVHttp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RVHttp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76644FF11F0252EF00AA5E6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76644FF31F0252EF00AA5E6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +52,21 @@
 		766450061F0252EF00AA5E6C /* RVHttpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RVHttpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7664500A1F0252EF00AA5E6C /* RVHttpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVHttpTests.m; sourceTree = "<group>"; };
 		7664500C1F0252EF00AA5E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766450171F0252FF00AA5E6C /* RVFakeUrlSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVFakeUrlSession.h; sourceTree = "<group>"; };
+		766450181F0252FF00AA5E6C /* RVFakeUrlSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVFakeUrlSession.m; sourceTree = "<group>"; };
+		766450191F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVFakeUrlSessionDataTask.h; sourceTree = "<group>"; };
+		7664501A1F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVFakeUrlSessionDataTask.m; sourceTree = "<group>"; };
+		7664501C1F0252FF00AA5E6C /* RVHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVHttpResponse.h; sourceTree = "<group>"; };
+		7664501D1F0252FF00AA5E6C /* RVHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVHttpResponse.m; sourceTree = "<group>"; };
+		7664501E1F0252FF00AA5E6C /* RVHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVHttp.h; sourceTree = "<group>"; };
+		7664501F1F0252FF00AA5E6C /* RVHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVHttp.m; sourceTree = "<group>"; };
+		766450201F0252FF00AA5E6C /* RVHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVHttpRequest.h; sourceTree = "<group>"; };
+		766450211F0252FF00AA5E6C /* RVHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVHttpRequest.m; sourceTree = "<group>"; };
+		766450271F02535400AA5E6C /* RVHttp.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RVHttp.podspec.json; sourceTree = "<group>"; };
+		766450291F02535800AA5E6C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		8D1C7F86CB5A7364B3828BE0 /* Pods-RVHttpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7141342A86F9923B12AD04A /* libPods-RVHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RVHttp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A5A10FDF31783830513429 /* Pods-RVHttp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34404B78C5C462D8871ABD1A /* libPods-RVHttp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +82,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B779636E6F18BD208846F7 /* libPods-RVHttpTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A548773C460FFB757DDAF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7141342A86F9923B12AD04A /* libPods-RVHttp.a */,
+				074DE084A639C01CC983EE86 /* libPods-RVHttpTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76644FE41F0252EF00AA5E6C = {
 			isa = PBXGroup;
 			children = (
+				766450291F02535800AA5E6C /* readme.md */,
+				766450271F02535400AA5E6C /* RVHttp.podspec.json */,
 				76644FEF1F0252EF00AA5E6C /* RVHttp */,
 				766450091F0252EF00AA5E6C /* RVHttpTests */,
 				76644FEE1F0252EF00AA5E6C /* Products */,
+				9CD44529D1C43549B05EC137 /* Pods */,
+				11A548773C460FFB757DDAF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +123,7 @@
 		76644FEF1F0252EF00AA5E6C /* RVHttp */ = {
 			isa = PBXGroup;
 			children = (
+				766450151F0252FF00AA5E6C /* lib */,
 				76644FF31F0252EF00AA5E6C /* AppDelegate.h */,
 				76644FF41F0252EF00AA5E6C /* AppDelegate.m */,
 				76644FF61F0252EF00AA5E6C /* ViewController.h */,
@@ -111,6 +154,50 @@
 			path = RVHttpTests;
 			sourceTree = "<group>";
 		};
+		766450151F0252FF00AA5E6C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				766450161F0252FF00AA5E6C /* FakeUrlSession */,
+				7664501B1F0252FF00AA5E6C /* Response */,
+				7664501E1F0252FF00AA5E6C /* RVHttp.h */,
+				7664501F1F0252FF00AA5E6C /* RVHttp.m */,
+				766450201F0252FF00AA5E6C /* RVHttpRequest.h */,
+				766450211F0252FF00AA5E6C /* RVHttpRequest.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		766450161F0252FF00AA5E6C /* FakeUrlSession */ = {
+			isa = PBXGroup;
+			children = (
+				766450171F0252FF00AA5E6C /* RVFakeUrlSession.h */,
+				766450181F0252FF00AA5E6C /* RVFakeUrlSession.m */,
+				766450191F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.h */,
+				7664501A1F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m */,
+			);
+			path = FakeUrlSession;
+			sourceTree = "<group>";
+		};
+		7664501B1F0252FF00AA5E6C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7664501C1F0252FF00AA5E6C /* RVHttpResponse.h */,
+				7664501D1F0252FF00AA5E6C /* RVHttpResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9CD44529D1C43549B05EC137 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3506C7D89B48EF198B1A44C3 /* Pods-RVHttp.debug.xcconfig */,
+				A8A5A10FDF31783830513429 /* Pods-RVHttp.release.xcconfig */,
+				446C2CF354AF12BE4E7CA69A /* Pods-RVHttpTests.debug.xcconfig */,
+				8D1C7F86CB5A7364B3828BE0 /* Pods-RVHttpTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7664500F1F0252EF00AA5E6C /* Build configuration list for PBXNativeTarget "RVHttp" */;
 			buildPhases = (
+				769E4085C39CA080B3DE837F /* [CP] Check Pods Manifest.lock */,
 				76644FE91F0252EF00AA5E6C /* Sources */,
 				76644FEA1F0252EF00AA5E6C /* Frameworks */,
 				76644FEB1F0252EF00AA5E6C /* Resources */,
+				B7AE1D27E5DD5C8B7A792ECB /* [CP] Embed Pods Frameworks */,
+				BF5F26B7887E5B975308841B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 766450121F0252EF00AA5E6C /* Build configuration list for PBXNativeTarget "RVHttpTests" */;
 			buildPhases = (
+				E6CA5FCDF9851210DD8B29D7 /* [CP] Check Pods Manifest.lock */,
 				766450021F0252EF00AA5E6C /* Sources */,
 				766450031F0252EF00AA5E6C /* Frameworks */,
 				766450041F0252EF00AA5E6C /* Resources */,
+				C574C5000C6F9FA0001CCA18 /* [CP] Embed Pods Frameworks */,
+				9C27701C7C17DB2F6940B89D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +289,7 @@
 				766450001F0252EF00AA5E6C /* LaunchScreen.storyboard in Resources */,
 				76644FFD1F0252EF00AA5E6C /* Assets.xcassets in Resources */,
 				76644FFB1F0252EF00AA5E6C /* Main.storyboard in Resources */,
+				766450281F02535400AA5E6C /* RVHttp.podspec.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,14 +302,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		769E4085C39CA080B3DE837F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C27701C7C17DB2F6940B89D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7AE1D27E5DD5C8B7A792ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF5F26B7887E5B975308841B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C574C5000C6F9FA0001CCA18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CA5FCDF9851210DD8B29D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76644FE91F0252EF00AA5E6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766450241F0252FF00AA5E6C /* RVHttpResponse.m in Sources */,
+				7664502A1F02535800AA5E6C /* readme.md in Sources */,
 				76644FF81F0252EF00AA5E6C /* ViewController.m in Sources */,
+				766450231F0252FF00AA5E6C /* RVFakeUrlSessionDataTask.m in Sources */,
+				766450261F0252FF00AA5E6C /* RVHttpRequest.m in Sources */,
 				76644FF51F0252EF00AA5E6C /* AppDelegate.m in Sources */,
+				766450251F0252FF00AA5E6C /* RVHttp.m in Sources */,
 				76644FF21F0252EF00AA5E6C /* main.m in Sources */,
+				766450221F0252FF00AA5E6C /* RVFakeUrlSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +542,7 @@
 		};
 		766450101F0252EF00AA5E6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3506C7D89B48EF198B1A44C3 /* Pods-RVHttp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RVHttp/Info.plist;
@@ -360,6 +554,7 @@
 		};
 		766450111F0252EF00AA5E6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8A5A10FDF31783830513429 /* Pods-RVHttp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RVHttp/Info.plist;
@@ -371,6 +566,7 @@
 		};
 		766450131F0252EF00AA5E6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 446C2CF354AF12BE4E7CA69A /* Pods-RVHttpTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RVHttpTests/Info.plist;
@@ -383,6 +579,7 @@
 		};
 		766450141F0252EF00AA5E6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1C7F86CB5A7364B3828BE0 /* Pods-RVHttpTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RVHttpTests/Info.plist;
@@ -412,6 +609,7 @@
 				766450111F0252EF00AA5E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		766450121F0252EF00AA5E6C /* Build configuration list for PBXNativeTarget "RVHttpTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +618,7 @@
 				766450141F0252EF00AA5E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
