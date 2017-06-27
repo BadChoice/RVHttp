@@ -44,7 +44,7 @@
         DLog(@"Url: %@", url);
     }
     else{
-        NSString* body = self.body ? self.body : [self buildBody:NO];
+        NSString* body = isNull(self.body) ? [self buildBody:NO] : self.body;
         [request setURL:[NSURL URLWithString:self.url]];
         [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
         DLog(@"Url: %@", self.url);
@@ -56,7 +56,7 @@
 }
 
 -(void)addHeaders:(NSMutableURLRequest*)request{
-    if( ! self.headers ) return;
+    if( isNull(self.headers) ) return;
     [self.headers each:^(id key, id object) {
         [request setValue:object forHTTPHeaderField:key];
     }];
@@ -64,14 +64,9 @@
 
 -(NSString*)buildBody:(BOOL)paramEncoded{
     return [self.parameters.allKeys reduce:^id(NSString* carry, NSString* paramKey) {
-        if( ! self.parameters[paramKey] ) return str(@"%@%@&", carry, paramKey);
+        if( isNull(self.parameters[paramKey]) ) return str(@"%@%@&", carry, paramKey);
         
         NSString* param = self.parameters[paramKey];
-        
-        if(paramEncoded && isNull(param)){
-            return str(@"%@%@&", carry, paramKey);
-        }
-        
         if(paramEncoded && [param isKindOfClass:NSString.class]){
             param = param.urlEncode;
         }
@@ -90,11 +85,11 @@
 
 -(NSString*)toString{
     return @{
-             @"url"        : valueOrNull(self.url),
-             @"method"     : valueOrNull(self.method),
-             @"body"       : valueOrNull(self.body),
-             @"parameters" : valueOrNull(self.parameters),
-             @"headers"    : valueOrNull(self.headers)
+             @"url"        : valueOrNull ( self.url ),
+             @"method"     : valueOrNull ( self.method ),
+             @"body"       : valueOrNull ( self.body ),
+             @"parameters" : valueOrNull ( self.parameters ),
+             @"headers"    : valueOrNull ( self.headers )
              }.toString;
 }
 
