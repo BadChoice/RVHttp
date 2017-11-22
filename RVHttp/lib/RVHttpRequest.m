@@ -38,6 +38,10 @@
     [request setHTTPMethod:self.method];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     
+    if(self.timeout != 0){
+        request.timeoutInterval = self.timeout;
+    }
+    
     if( isEqual(@"GET", self.method) ){
         NSString* url = [self buildUrl];
         [request setURL:[NSURL URLWithString:url]];

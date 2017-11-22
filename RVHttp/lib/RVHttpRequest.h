@@ -16,6 +16,7 @@
 @property(strong,nonatomic) NSString* body;
 @property(strong,nonatomic) NSDictionary* parameters;
 @property(strong,nonatomic) NSDictionary* headers;
+@property(nonatomic) int timeout;
 
 +(RVHttpRequest*)method:(NSString*)method url:(NSString*)url;
 +(RVHttpRequest*)method:(NSString*)method url:(NSString*)url params:(NSDictionary*)params;
