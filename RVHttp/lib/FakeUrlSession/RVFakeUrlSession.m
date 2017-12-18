@@ -15,7 +15,6 @@
                             completionHandler:(nonnull void (^)(NSData * _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completionHandler{
     
     return [RVFakeUrlSessionDataTask make:request completion:completionHandler];
-    
 }
 
 @end

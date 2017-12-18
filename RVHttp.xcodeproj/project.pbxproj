@@ -22,6 +22,8 @@
 		766450251F0252FF00AA5E6C /* RVHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7664501F1F0252FF00AA5E6C /* RVHttp.m */; };
 		766450261F0252FF00AA5E6C /* RVHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 766450211F0252FF00AA5E6C /* RVHttpRequest.m */; };
 		766450281F02535400AA5E6C /* RVHttp.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 766450271F02535400AA5E6C /* RVHttp.podspec.json */; };
+		775100E690854452059786E2 /* RVHttpFake.m in Sources */ = {isa = PBXBuildFile; fileRef = 775103987A8F2D9C129578F2 /* RVHttpFake.m */; };
+		77510F8C690D25FED811B958 /* RVFakeHttpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751066962C1AE6BD2EDB965 /* RVFakeHttpTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		766450211F0252FF00AA5E6C /* RVHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVHttpRequest.m; sourceTree = "<group>"; };
 		766450271F02535400AA5E6C /* RVHttp.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RVHttp.podspec.json; sourceTree = "<group>"; };
 		766450291F02535800AA5E6C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		775103987A8F2D9C129578F2 /* RVHttpFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVHttpFake.m; sourceTree = "<group>"; };
+		7751066962C1AE6BD2EDB965 /* RVFakeHttpTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVFakeHttpTests.m; sourceTree = "<group>"; };
+		775107492B3729BCEBDB5B7D /* RVHttpFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVHttpFake.h; sourceTree = "<group>"; };
 		8D1C7F86CB5A7364B3828BE0 /* Pods-RVHttpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7141342A86F9923B12AD04A /* libPods-RVHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RVHttp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A5A10FDF31783830513429 /* Pods-RVHttp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RVHttp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 			children = (
 				7664500A1F0252EF00AA5E6C /* RVHttpTests.m */,
 				7664500C1F0252EF00AA5E6C /* Info.plist */,
+				7751066962C1AE6BD2EDB965 /* RVFakeHttpTests.m */,
 			);
 			path = RVHttpTests;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 				7664501F1F0252FF00AA5E6C /* RVHttp.m */,
 				766450201F0252FF00AA5E6C /* RVHttpRequest.h */,
 				766450211F0252FF00AA5E6C /* RVHttpRequest.m */,
+				775108B63C87F22084672F92 /* Fake */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -184,6 +191,15 @@
 				7664501D1F0252FF00AA5E6C /* RVHttpResponse.m */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		775108B63C87F22084672F92 /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				775103987A8F2D9C129578F2 /* RVHttpFake.m */,
+				775107492B3729BCEBDB5B7D /* RVHttpFake.h */,
+			);
+			path = Fake;
 			sourceTree = "<group>";
 		};
 		9CD44529D1C43549B05EC137 /* Pods */ = {
@@ -414,6 +430,7 @@
 				766450251F0252FF00AA5E6C /* RVHttp.m in Sources */,
 				76644FF21F0252EF00AA5E6C /* main.m in Sources */,
 				766450221F0252FF00AA5E6C /* RVFakeUrlSession.m in Sources */,
+				775100E690854452059786E2 /* RVHttpFake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7664500B1F0252EF00AA5E6C /* RVHttpTests.m in Sources */,
+				77510F8C690D25FED811B958 /* RVFakeHttpTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

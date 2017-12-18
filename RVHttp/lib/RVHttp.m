@@ -15,65 +15,70 @@ static BOOL disable_testing;
 
 @implementation RVHttp
 
-+(void)post:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion{
-    
++(void)post:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:params];
     [self call:request completion:completion];
 }
 
-+(void)post:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
-    
++(void)post:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:params headers:headers];
     [self call:request completion:completion];
 }
 
-+(void)post:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion{
++(void)post:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion
+{
     [self.class post:url body:body headers:nil completion:completion];
 }
 
-+(void)postJson:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion{
++(void)postJson:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion
+{
     [self.class post:url body:body headers:@{@"Content-Type":@"application/json"} completion:completion];
 }
 
-+(void)post:(NSString*)url body:(NSString*)body headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
-    
++(void)post:(NSString*)url body:(NSString*)body headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:nil headers:headers];
     request.body = body;
     [self call:request completion:completion];
 }
 
-+(void)put:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse* response))completion{
-    
++(void)put:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse* response))completion
+{
     [self put:url params:params headers:nil completion:completion];
 }
 
-+(void)put:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
-
++(void)put:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"PUT" url:url params:params headers:headers];
     [self call:request completion:completion];
 }
 
-+(void)delete:(NSString*)url completion:(void (^)(RVHttpResponse* response))completion{
++(void)delete:(NSString*)url completion:(void (^)(RVHttpResponse* response))completion
+{
     [self.class delete:url params:nil headers:nil completion:completion];
 }
 
-+(void)delete:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
++(void)delete:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"DELETE" url:url params:params headers:headers];
     [self call:request completion:completion];
 }
 
-+(void)get:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion{
++(void)get:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion
+{
     [self.class get:url params:params headers:nil completion:completion];
 }
 
-+(void)get:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse *response))completion{
-    
++(void)get:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse *response))completion
+{
     RVHttpRequest *request = [RVHttpRequest method:@"GET" url:url params:params headers:headers];
     [self call:request completion:completion];
 }
 
-+(void)call:(RVHttpRequest*)theRequest completion:(void (^)(RVHttpResponse *response))completion{
-    
++(void)call:(RVHttpRequest*)theRequest completion:(void (^)(RVHttpResponse *response))completion
+{
     NSMutableURLRequest* request = [theRequest generate];
         
     NSURLSession *session           = [self.class getUrlSession];
@@ -113,6 +118,7 @@ static BOOL disable_testing;
 +(void)disableTest{
     disable_testing = true;
 }
+
 +(void)enableTest{
     disable_testing = false;
 }

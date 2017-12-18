@@ -27,7 +27,7 @@ static NSMutableDictionary* responses;
     NSData* data = [NSJSONSerialization dataWithJSONObject:response
                                                    options:NSJSONWritingPrettyPrinted
                                                      error:nil];
-    self.completion(data,nil,nil);
+    self.completion(data, nil, nil);
 }
 
 +(void)addResponseForUrl:(NSString*)url response:(NSDictionary*)json{
