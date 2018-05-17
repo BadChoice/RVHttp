@@ -1,0 +1,12 @@
+PODS:
+  - Collection (1.8.3)
+
+DEPENDENCIES:
+  - Collection
+
+SPEC CHECKSUMS:
+  Collection: ee26c0639c3202d5d8b1a5435828f10bea0d1281
+
+PODFILE CHECKSUM: f60941c1b8ca7d293ae4d83bf29201ce0560d4b7
+
+COCOAPODS: 1.3.1
