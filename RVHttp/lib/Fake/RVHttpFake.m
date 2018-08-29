@@ -60,7 +60,8 @@ static bool swizzled;
         return completion(response);
     }
     NSDictionary* responseDict = response;
-    RVHttpResponse * httpResponse = [[RVHttpResponse alloc] initWithData:[NSData dataWithBytes:responseDict.toString.UTF8String length:responseDict.toString.length] response:nil error:nil];
+    NSHTTPURLResponse * r = [[NSHTTPURLResponse alloc] initWithURL:NSURL.new statusCode:200 HTTPVersion:@"1.0" headerFields:nil];
+    RVHttpResponse * httpResponse = [[RVHttpResponse alloc] initWithData:[NSData dataWithBytes:responseDict.toString.UTF8String length:responseDict.toString.length] response:r error:nil];
     return completion(httpResponse);
 }
 

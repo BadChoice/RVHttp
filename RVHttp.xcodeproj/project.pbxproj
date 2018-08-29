@@ -224,8 +224,6 @@
 				76644FE91F0252EF00AA5E6C /* Sources */,
 				76644FEA1F0252EF00AA5E6C /* Frameworks */,
 				76644FEB1F0252EF00AA5E6C /* Resources */,
-				B7AE1D27E5DD5C8B7A792ECB /* [CP] Embed Pods Frameworks */,
-				BF5F26B7887E5B975308841B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,8 +242,6 @@
 				766450021F0252EF00AA5E6C /* Sources */,
 				766450031F0252EF00AA5E6C /* Frameworks */,
 				766450041F0252EF00AA5E6C /* Resources */,
-				C574C5000C6F9FA0001CCA18 /* [CP] Embed Pods Frameworks */,
-				9C27701C7C17DB2F6940B89D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,66 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C27701C7C17DB2F6940B89D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B7AE1D27E5DD5C8B7A792ECB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF5F26B7887E5B975308841B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttp/Pods-RVHttp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C574C5000C6F9FA0001CCA18 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RVHttpTests/Pods-RVHttpTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E6CA5FCDF9851210DD8B29D7 /* [CP] Check Pods Manifest.lock */ = {
