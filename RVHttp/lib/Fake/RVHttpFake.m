@@ -9,6 +9,7 @@
 
 static NSMutableDictionary* responses;
 static id globalResponse;
+static int globalResponseStatuscode;
 static bool swizzled;
 
 +(void)enable{
