@@ -1,15 +1,14 @@
 {
     "name": "RVHttp",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "summary": "Easy http request",
     "license": "MIT",
     "platforms": {
-        "ios": "7.0",
-        "osx": "10.9"
+        "ios": "7.0"
     },
     "source": {
         "git": "https://github.com/BadChoice/RVHttp.git",
-        "tag": "1.2.5"
+        "tag": "1.2.6"
     },
     "dependencies":{
         "Collection": [
