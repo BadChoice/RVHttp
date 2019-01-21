@@ -59,4 +59,38 @@
     [self waitForExpectationsWithTimeout:5 handler:nil];
 }
 
+-(void)test_can_have_multiple_responses_and_get_them_in_a_queue{
+    [RVHttpFake setResponses:@[
+            @{@"hello" : @"world"},
+            @{@"hello" : @"me"},
+            @{@"hello" : @"everybody"}
+    ]];
+
+    XCTestExpectation *expectation1 = [self expectationWithDescription:@"Response is returned"];
+    XCTestExpectation *expectation2 = [self expectationWithDescription:@"Response is returned"];
+    XCTestExpectation *expectation3 = [self expectationWithDescription:@"Response is returned"];
+
+    [RVHttp post:@"http://hello.com" params:@{} completion:^(RVHttpResponse *response) {
+        NSDictionary* responseDict = response.toDictionary;
+        XCTAssertNotNil(responseDict);
+        XCTAssertEqualObjects(responseDict[@"hello"], @"world");
+        [expectation1 fulfill];
+    }];
+
+    [RVHttp post:@"http://hello.com" params:@{} completion:^(RVHttpResponse *response) {
+        NSDictionary* responseDict = response.toDictionary;
+        XCTAssertNotNil(responseDict);
+        XCTAssertEqualObjects(responseDict[@"hello"], @"me");
+        [expectation2 fulfill];
+    }];
+
+    [RVHttp post:@"http://hello.com" params:@{} completion:^(RVHttpResponse *response) {
+        NSDictionary* responseDict = response.toDictionary;
+        XCTAssertNotNil(responseDict);
+        XCTAssertEqualObjects(responseDict[@"hello"], @"everybody");
+        [expectation3 fulfill];
+    }];
+
+    [self waitForExpectations:@[expectation1,expectation2, expectation3 ] timeout:10];
+}
 @end

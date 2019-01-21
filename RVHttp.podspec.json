@@ -1,6 +1,6 @@
 {
     "name": "RVHttp",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "summary": "Easy http request",
     "license": "MIT",
     "platforms": {
@@ -8,7 +8,7 @@
     },
     "source": {
         "git": "https://github.com/BadChoice/RVHttp.git",
-        "tag": "1.2.6"
+        "tag": "1.2.7"
     },
     "dependencies":{
         "Collection": [

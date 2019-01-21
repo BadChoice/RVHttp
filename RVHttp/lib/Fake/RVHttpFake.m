@@ -51,6 +51,9 @@ static bool swizzled;
     }
 
     if (globalResponse) {
+        if ([globalResponse isKindOfClass:NSArray.class]){
+            return [RVHttpFake.class respond:((NSArray*)globalResponse).pop completion:completion];
+        }
         return [RVHttpFake.class respond:globalResponse completion:completion];
     }
     completion(nil);
@@ -80,4 +83,8 @@ static bool swizzled;
     responses[url]              = json;
 }
 
++ (void)setResponses:(NSArray *)array {
+    globalResponse = array.mutableCopy;
+    globalResponseStatuscode = 200;
+}
 @end
