@@ -82,7 +82,7 @@ static NSMutableArray* calls;
 }
 
 +(void)setResponseFor:(NSString *)url response:(NSDictionary*)json{
-    if( ! responses) responses  = [NSMutableDictionary new];
+    if (! responses) responses  = [NSMutableDictionary new];
     responses[url]              = json;
 }
 
@@ -94,4 +94,5 @@ static NSMutableArray* calls;
 +(NSMutableArray*)getCalls{
     return calls;
 }
+
 @end

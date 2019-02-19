@@ -1,11 +1,3 @@
-//
-//  RVNetwork.h
-//  Revo
-//
-//  Created by Jordi Puigdellívol on 20/7/16.
-//  Copyright © 2016 Gloobus Studio. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "RVHttpRequest.h"
 #import "RVHttpResponse.h"

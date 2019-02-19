@@ -8,4 +8,7 @@
 + (void)setResponseFor:(NSString *)url response:(NSDictionary *)json;
 
 + (void)setResponses:(NSArray *)array;
+
++ (NSMutableArray*)getCalls;
+
 @end

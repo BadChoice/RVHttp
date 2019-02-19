@@ -1,11 +1,3 @@
-//
-//  RVNetwork.m
-//  Revo
-//
-//  Created by Jordi Puigdellívol on 20/7/16.
-//  Copyright © 2016 Gloobus Studio. All rights reserved.
-//
-
 #import "RVHttp.h"
 #import "RVHttpRequest.h"
 #import "RVFakeUrlSession.h"
@@ -15,30 +7,25 @@ static BOOL disable_testing;
 
 @implementation RVHttp
 
-+(void)post:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion
-{
++(void)post:(NSString*)url params:(NSDictionary*)params completion:(void (^)(RVHttpResponse *response))completion{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:params];
     [self call:request completion:completion];
 }
 
-+(void)post:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
-{
++(void)post:(NSString*)url params:(NSDictionary*)params headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:params headers:headers];
     [self call:request completion:completion];
 }
 
-+(void)post:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion
-{
++(void)post:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion{
     [self.class post:url body:body headers:nil completion:completion];
 }
 
-+(void)postJson:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion
-{
++(void)postJson:(NSString*)url body:(NSString*)body completion:(void (^)(RVHttpResponse* response))completion{
     [self.class post:url body:body headers:@{@"Content-Type":@"application/json"} completion:completion];
 }
 
-+(void)post:(NSString*)url body:(NSString*)body headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion
-{
++(void)post:(NSString*)url body:(NSString*)body headers:(NSDictionary*)headers completion:(void (^)(RVHttpResponse* response))completion{
     RVHttpRequest *request = [RVHttpRequest method:@"POST" url:url params:nil headers:headers];
     request.body = body;
     [self call:request completion:completion];
@@ -106,8 +93,7 @@ static BOOL disable_testing;
     return [NSURLSession sharedSession];
 }
 
-+(BOOL) isRunningUnitTests
-{
++(BOOL) isRunningUnitTests {
     if(disable_testing) return NO;
     
     NSDictionary* environment = [ [ NSProcessInfo processInfo ] environment ];
