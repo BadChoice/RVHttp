@@ -44,6 +44,20 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>-[RVFakeHttpTest test_can_have_multiple_responses_and_get_them_in_a_queue].xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>-[RVFakeHttpTest].xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>

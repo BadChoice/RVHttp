@@ -11,8 +11,10 @@ static NSMutableDictionary* responses;
 static id globalResponse;
 static int globalResponseStatuscode;
 static bool swizzled;
+static NSMutableArray* calls;
 
 +(void)enable{
+    calls = NSMutableArray.new;
     if(swizzled) return;
     SEL originalSelector = @selector(call:completion:);
     SEL newSelector      = @selector(callFake:completion:);
@@ -46,6 +48,7 @@ static bool swizzled;
 }
 
 +(void)callFake:(RVHttpRequest*)theRequest completion:(void (^)(RVHttpResponse *response))completion{
+    [calls addObject:theRequest];
     if (responses[theRequest.url]) {
         return [RVHttpFake.class respond:responses[theRequest.url] completion:completion];
     }
@@ -86,5 +89,9 @@ static bool swizzled;
 + (void)setResponses:(NSArray *)array {
     globalResponse = array.mutableCopy;
     globalResponseStatuscode = 200;
+}
+
++(NSMutableArray*)getCalls{
+    return calls;
 }
 @end
