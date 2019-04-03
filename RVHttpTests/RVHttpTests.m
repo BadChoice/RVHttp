@@ -202,5 +202,23 @@
     [self waitForExpectationsWithTimeout:5 handler:nil];
 }
 
+-(void)test_set_custom_session {
+    [RVHttp disableTest];
+
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Response is returned"];
+
+    NSURLSessionConfiguration *sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration;
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
+    [RVHttp setUrlSession:session];
+
+    [RVHttp get:@"https://httpbin.org/get" params:@{} completion:^(RVHttpResponse *response) {
+        XCTAssertEqual(response.statusCode, 200);
+        [expectation fulfill];
+    }];
+
+    XCTAssertEqual(session, [RVHttp getUrlSession]);
+
+    [self waitForExpectationsWithTimeout:5 handler:nil];
+}
 
 @end
