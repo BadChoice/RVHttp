@@ -29,6 +29,9 @@
 
 +(void)call:(RVHttpRequest*)theRequest completion:(void (^)(RVHttpResponse* response))completion;
 
++(void)setUrlSession:(NSURLSession *)newSession;
+
++ (NSURLSession *)getUrlSession;
 +(void)disableTest;
 +(void)enableTest;
 @end

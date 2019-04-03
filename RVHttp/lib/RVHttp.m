@@ -4,6 +4,7 @@
 #import "RVCollection.h"
 
 static BOOL disable_testing;
+static NSURLSession *session;
 
 @implementation RVHttp
 
@@ -83,6 +84,10 @@ static BOOL disable_testing;
     [dataTask resume];
 }
 
++ (void)setUrlSession:(NSURLSession *)newSession {
+    session = newSession;
+}
+
 /**
  * To use fake request calls set the enviornmentvariable as @"TESTING"
  */
@@ -90,6 +95,7 @@ static BOOL disable_testing;
     if([self.class isRunningUnitTests]){
         return [RVFakeUrlSession new];
     }
+    if(session) return session;
     return [NSURLSession sharedSession];
 }
 
