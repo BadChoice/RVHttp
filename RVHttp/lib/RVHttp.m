@@ -5,6 +5,7 @@
 
 static BOOL disable_testing;
 static NSURLSession *session;
+static BOOL debugMode;
 
 @implementation RVHttp
 
@@ -67,8 +68,12 @@ static NSURLSession *session;
 
 +(void)call:(RVHttpRequest*)theRequest completion:(void (^)(RVHttpResponse *response))completion
 {
+    if(debugMode){
+        NSLog(@"**** RVHttp Debug **** : %@", theRequest.toCurl);
+    }
+    
     NSMutableURLRequest* request = [theRequest generate];
-        
+            
     NSURLSession *session           = [self.class getUrlSession];
     NSURLSessionDataTask *dataTask  = [session dataTaskWithRequest:request
                                                  completionHandler:^(NSData *data, NSURLResponse *urlResponse, NSError *error)
@@ -113,6 +118,14 @@ static NSURLSession *session;
 
 +(void)enableTest{
     disable_testing = false;
+}
+
++(void)enableDebug{
+    debugMode = true;
+}
+
++(void)disableDebug{
+    debugMode = false;
 }
 
 @end

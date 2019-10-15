@@ -32,6 +32,8 @@
 +(void)setUrlSession:(NSURLSession *)newSession;
 
 + (NSURLSession *)getUrlSession;
-+(void)disableTest;
-+(void)enableTest;
++ (void)disableTest;
++ (void)enableTest;
++ (void)enableDebug;
++ (void)disableDebug;
 @end

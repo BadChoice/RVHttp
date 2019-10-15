@@ -106,4 +106,29 @@
     return request;
 }
 
+-(NSString*)toCurl{
+    NSMutableString* curl = @"curl ".mutableCopy;
+    
+    NSString* params = [[self.parameters map:^id(NSString* key, NSString* value) {
+        return str(@"%@=%@", key, value);
+    }].allValues implode:@"&"];
+    
+    if(params){
+        [curl appendFormat:@"-d \"%@\"", params];
+    }
+    
+    NSString* headers = [[self.headers map:^id(NSString* key, NSString* value) {
+        return str(@"-H %@: %@", key, value);
+    }].allValues implode:@" "];
+    
+    if(headers){
+        [curl appendFormat:@"-d %@", headers];
+    }
+    
+    [curl appendFormat:@" -X %@", self.method];
+    [curl appendFormat:@" %@", self.url];
+    
+    return curl;
+}
+
 @end

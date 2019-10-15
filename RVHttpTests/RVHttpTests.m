@@ -10,7 +10,9 @@
 #import "RVFakeUrlSessionDataTask.h"
 #import "RVHttpRequest.h"
 #import "RVCollection.h"
+#import "RVHttpRequest.h"
 #import "RVHttp.h"
+
 
 @interface RVHttpTest : XCTestCase
 
@@ -219,6 +221,14 @@
     XCTAssertEqual(session, [RVHttp getUrlSession]);
 
     [self waitForExpectationsWithTimeout:5 handler:nil];
+}
+
+-(void)test_can_convert_request_to_curl {
+    
+    RVHttpRequest * request = [RVHttpRequest method:@"POST" url:@"https://httpbin.org/get" params:@{@"hello" : @"world", @"bye" : @"universe"}];
+    NSString* curl = request.toCurl;
+    
+    XCTAssertEqualObjects(@"curl -d \"hello=world&bye=universe\" -X POST https://httpbin.org/get", curl);
 }
 
 @end

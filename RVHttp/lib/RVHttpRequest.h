@@ -25,4 +25,5 @@
 
 -(NSMutableURLRequest*)generate;
 -(NSString*)toString;
+-(NSString*)toCurl;
 @end
