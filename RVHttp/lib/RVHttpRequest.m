@@ -118,7 +118,7 @@
     }
     
     NSString* headers = [[self.headers map:^id(NSString* key, NSString* value) {
-        return str(@"-H %@: %@", key, value);
+        return str(@"-H \"%@: %@\"", key, value);
     }].allValues implode:@" "];
     
     if(headers){
